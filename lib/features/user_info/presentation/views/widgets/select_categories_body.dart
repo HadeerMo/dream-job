@@ -15,17 +15,18 @@ class SelectCategoriesBody extends StatelessWidget {
   Widget build(BuildContext context) {
     CategoriesProvider provider = Provider.of<CategoriesProvider>(context);
     List<Category> categoriesList = provider.categoriesList;
-    return Column(
-      children: [
-        const CustomAppbar(),
-        const SelectCategoriesTitle(),
-        const SizedBox(
-          height: 20,
-        ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * .58,
-          child: ListView.builder(
+    return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: Column(
+        children: [
+          const CustomAppbar(),
+          const SelectCategoriesTitle(),
+          const SizedBox(
+            height: 20,
+          ),
+          ListView.builder(
             shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: categoriesList.length,
             itemBuilder: (context, index) {
               return CustomCheckbox(
@@ -36,16 +37,16 @@ class SelectCategoriesBody extends StatelessWidget {
               );
             },
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 35),
-          child: CustomButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed(FillProfile.id);
-            },
-          ),
-        )
-      ],
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 35),
+            child: CustomButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(FillProfile.id);
+              },
+            ),
+          )
+        ],
+      ),
     );
   }
 }
