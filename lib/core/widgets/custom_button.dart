@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
-    super.key, this.onPressed,
+    super.key,
+    this.onPressed,
+    required this.text,
   });
   final void Function()? onPressed;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -22,9 +25,9 @@ class CustomButton extends StatelessWidget {
           ),
         ),
       ),
-      child: const Text(
-        'Find jobs',
-        style: TextStyle(
+      child: Text(
+        text,
+        style: const TextStyle(
             color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),
       ),
     );

@@ -1,7 +1,6 @@
 import 'package:dream_jop/features/user_info/data/models/category.dart';
 
 class GetCategoriesInfo {
-
   static List<Category> getAllCategories() {
     List<Category> categories = [
       Category(id: 1, name: 'Marketing', isChecked: false),

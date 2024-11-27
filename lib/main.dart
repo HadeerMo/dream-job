@@ -1,3 +1,4 @@
+import 'package:dream_jop/features/home_page/presentation/views/home_page.dart';
 import 'package:dream_jop/features/user_info/presentation/views/fill_profile.dart';
 import 'package:dream_jop/features/user_info/presentation/views/select_categories_page.dart';
 import 'package:dream_jop/features/welcome/presentation/views/welcome.dart';
@@ -28,6 +29,7 @@ class DreamJop extends StatelessWidget {
           '/': (context) => const Welcome(),
           SelectCategoriesPage.id: (context) => const SelectCategoriesPage(),
           FillProfile.id: (context) => const FillProfile(),
+          HomePage.id: (context) => const HomePage(),
         },
       ),
     );

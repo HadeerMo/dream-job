@@ -11,22 +11,24 @@ class WelcomeTitle extends StatelessWidget {
     return const SizedBox(
       width: double.infinity,
       child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        MainTitle(fontSize: 40,),
-            SizedBox(height: 8,),
-            Text(
-              'Find your dream jop here',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                decoration: TextDecoration.none,
-              ),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          MainTitle(
+            fontSize: 40,
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Text(
+            'Find your dream jop here',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              decoration: TextDecoration.none,
             ),
-      ],
-              ),
+          ),
+        ],
+      ),
     );
   }
 }
-
-

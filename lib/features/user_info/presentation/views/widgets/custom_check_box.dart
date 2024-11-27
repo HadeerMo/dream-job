@@ -44,7 +44,11 @@ class CustomCheckbox extends StatelessWidget {
                           catProvider.changeCategoryState(category);
                         },
                         activeColor: const Color(0xff2623d3),
-                        shape: const StadiumBorder(),
+                        shape: StadiumBorder(
+                            side: WidgetStateBorderSide.resolveWith((states) =>
+                                const BorderSide(
+                                    color: Colors
+                                        .red))), // The "highlight" color // Color when unchecked
                       ),
                     ),
                   );

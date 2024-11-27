@@ -11,11 +11,11 @@ class CustomAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: mainColor,
-      height: MediaQuery.of(context).size.height *.1,
+      height: MediaQuery.of(context).size.height * .1,
       child: const Center(
         child: MainTitle(
-              fontSize: 27,
-            ),
+          fontSize: 27,
+        ),
       ),
     );
   }

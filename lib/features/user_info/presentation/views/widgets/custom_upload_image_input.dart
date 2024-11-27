@@ -24,6 +24,7 @@ class _UploadImageFieldState extends State<UploadImageField> {
       });
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

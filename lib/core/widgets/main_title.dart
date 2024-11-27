@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class MainTitle extends StatelessWidget {
   const MainTitle({
-    super.key, required this.fontSize,
+    super.key,
+    required this.fontSize,
   });
   final double fontSize;
   @override

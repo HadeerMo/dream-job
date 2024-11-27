@@ -9,7 +9,6 @@ class SelectCategoriesPage extends StatelessWidget {
     return const SafeArea(
       child: Scaffold(
         body: SelectCategoriesBody(),
-        
       ),
     );
   }
