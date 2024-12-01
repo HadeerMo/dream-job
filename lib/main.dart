@@ -2,6 +2,7 @@ import 'package:dream_jop/core/utils/service_locator.dart';
 import 'package:dream_jop/features/home_page/data/repos/home_repo.dart';
 import 'package:dream_jop/features/home_page/presentation/manager/cubits/home_cubit/home_cubit.dart';
 import 'package:dream_jop/features/home_page/presentation/views/home_page.dart';
+import 'package:dream_jop/features/home_page/presentation/views/job_details.dart';
 import 'package:dream_jop/features/user_info/presentation/views/fill_profile.dart';
 import 'package:dream_jop/features/user_info/presentation/views/select_categories_page.dart';
 import 'package:dream_jop/features/welcome/presentation/views/welcome.dart';
@@ -40,6 +41,7 @@ class DreamJop extends StatelessWidget {
           SelectCategoriesPage.id: (context) => const SelectCategoriesPage(),
           FillProfile.id: (context) => const FillProfile(),
           HomePage.id: (context) => const HomePage(),
+          JobDetails.id: (context) => const JobDetails(),
         },
       ),
     );

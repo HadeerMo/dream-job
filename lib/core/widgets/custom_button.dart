@@ -1,3 +1,4 @@
+import 'package:dream_jop/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -14,7 +15,7 @@ class CustomButton extends StatelessWidget {
       onPressed: onPressed,
       style: ButtonStyle(
         backgroundColor: const WidgetStatePropertyAll(
-          Color(0xff2623d3),
+          ntbColor,
         ),
         minimumSize: const WidgetStatePropertyAll(
           Size(double.infinity, 50),

@@ -1,4 +1,5 @@
 import 'package:dream_jop/core/models/jobs/jobs.dart';
+import 'package:dream_jop/features/home_page/presentation/views/job_details.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/card_image.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/card_info.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/card_landing.dart';
@@ -12,8 +13,11 @@ class JobCard extends StatelessWidget {
   final Jobs job;
   @override
   Widget build(BuildContext context) {
+    
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).pushNamed(JobDetails.id,arguments: job);
+      },
       child: Container(
         margin: const EdgeInsets.only(bottom: 15),
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
@@ -52,5 +56,3 @@ class JobCard extends StatelessWidget {
     );
   }
 }
-
-
