@@ -1,5 +1,3 @@
-import 'package:dio/dio.dart';
-import 'package:dream_jop/core/utils/api_service.dart';
 import 'package:dream_jop/core/utils/service_locator.dart';
 import 'package:dream_jop/features/home_page/data/repos/home_repo.dart';
 import 'package:dream_jop/features/home_page/presentation/manager/cubits/home_cubit/home_cubit.dart';
@@ -13,6 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const DreamJop());
 }
 

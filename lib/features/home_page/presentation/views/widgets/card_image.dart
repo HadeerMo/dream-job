@@ -12,10 +12,6 @@ class CardImage extends StatelessWidget {
       width: MediaQuery.of(context).size.width * .1,
       height: MediaQuery.of(context).size.width * .1,
       decoration: BoxDecoration(
-        border: const Border.symmetric(
-          vertical: BorderSide(color: Colors.black),
-          horizontal: BorderSide(color: Colors.black),
-        ),
         borderRadius: BorderRadius.circular(8),
         image: DecorationImage(
           image: AssetImage(imageUrl),

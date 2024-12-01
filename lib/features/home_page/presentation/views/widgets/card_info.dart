@@ -56,9 +56,9 @@ class CardInfo extends StatelessWidget {
           height: 10,
         ),
         SalaryText(annualSalary: annualSalary),
-        const SizedBox(
-          height: 7,
-        ),
+        // const SizedBox(
+        //   height: 7,
+        // ),
       ],
     );
   }

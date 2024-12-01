@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:dream_jop/core/models/jobs.dart';
+import 'package:dream_jop/core/models/jobs/jobs.dart';
 import 'package:dream_jop/features/home_page/data/repos/home_repo.dart';
 import 'package:equatable/equatable.dart';
 

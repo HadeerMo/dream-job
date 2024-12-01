@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:dream_jop/core/errors/failure.dart';
-import 'package:dream_jop/core/models/jobs.dart';
+import 'package:dream_jop/core/models/jobs/jobs.dart';
 import 'package:dream_jop/core/utils/api_service.dart';
 
 class HomeRepo {
@@ -11,10 +11,9 @@ class HomeRepo {
   Future<Either<Failure, List<Jobs>>> fetchJobs() async {
     try {
       var data = await apiService.get(
-          endPoint:
-              '');
+          url: 'https://www.themuse.com/api/public/jobs?page=1');
       List<Jobs> jobs = [];
-      for (var item in data['jobs']) {
+      for (var item in data['results']) {
         jobs.add(Jobs.fromJson(item));
       }
       return right(jobs);
