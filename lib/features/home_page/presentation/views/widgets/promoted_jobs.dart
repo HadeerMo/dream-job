@@ -1,6 +1,8 @@
+import 'package:dream_jop/core/widgets/error_msg.dart';
 import 'package:dream_jop/features/home_page/presentation/manager/cubits/home_cubit/home_cubit.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/job_card.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/loading/loadingCard.dart';
+import 'package:dream_jop/features/home_page/presentation/views/widgets/recently_addedlist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,7 +28,7 @@ class PromotedJobs extends StatelessWidget {
         } else if (state is HomeFailure) {
           return SliverToBoxAdapter(
             child: Center(
-              child: Text(state.errMsg),
+              child: ErrorMsg(errorMsg: state.errMsg,),
             ),
           );
         } else {

@@ -19,9 +19,13 @@ class HomeRepo {
       return right(jobs);
     } catch (e) {
       if (e is DioException) {
-        return left(ServerFailure.fromDioException(e));
+        return left(
+          ServerFailure.fromDioException(e),
+        );
       } else {
-        return left(ServerFailure(e.toString()));
+        return left(
+          ServerFailure('An error occurred, please try again!'),
+        );
       }
     }
   }
