@@ -8,7 +8,10 @@ class JobDetailsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(children: const [
-      CustomAppbar(),
+      CustomAppbar(
+        back: Icons.arrow_back_ios,
+        markIt: Icons.bookmark_border,
+      ),
     ]);
   }
 }
