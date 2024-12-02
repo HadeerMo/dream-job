@@ -1,5 +1,6 @@
 import 'package:dream_jop/features/home_page/presentation/manager/cubits/home_cubit/home_cubit.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/job_card.dart';
+import 'package:dream_jop/features/home_page/presentation/views/widgets/loading/loadingCard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,7 +19,7 @@ class RecentlyAdded extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 23),
-                  child: JobCard(job: state.jobs[index]),
+                  child: JobCard(job: state.jobs[index+1]),
                 );
               });
         } else if (state is HomeFailure) {
@@ -28,7 +29,12 @@ class RecentlyAdded extends StatelessWidget {
             ),
           );
         } else {
-          return const SliverToBoxAdapter(child: CircularProgressIndicator());
+          return SliverList.builder(
+            itemCount: 2,
+            itemBuilder: (context, index) {
+              return const LoadingCard();
+            },
+          );
         }
       },
     );
