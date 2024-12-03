@@ -16,7 +16,7 @@ class RecentlyAdded extends StatelessWidget {
       builder: (context, state) {
         if (state is HomeSuccess) {
           return SliverList.builder(
-              itemCount: state.jobs.length,
+              itemCount: state.jobs.length-1,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 23),

@@ -35,8 +35,9 @@ class JobCard extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const CardImage(
-                  imageUrl: 'assets/Images/companyLogo.jpg',
+                CompanyLogo(
+                  imageUrl: 'assets/Images/jobLogo.png',
+                  size: MediaQuery.of(context).size.width * .1,
                 ),
                 const SizedBox(
                   width: 7,
