@@ -5,10 +5,12 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     this.onPressed,
-    required this.text,
+    required this.text, required this.width, required this.height,
   });
   final void Function()? onPressed;
   final String text;
+  final double width;
+  final double height;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -17,8 +19,8 @@ class CustomButton extends StatelessWidget {
         backgroundColor: const WidgetStatePropertyAll(
           ntbColor,
         ),
-        minimumSize: const WidgetStatePropertyAll(
-          Size(double.infinity, 50),
+        minimumSize: WidgetStatePropertyAll(
+          Size(width, height),
         ),
         shape: WidgetStatePropertyAll(
           RoundedRectangleBorder(

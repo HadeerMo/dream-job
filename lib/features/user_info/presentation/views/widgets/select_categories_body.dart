@@ -41,6 +41,8 @@ class SelectCategoriesBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 35),
             child: CustomButton(
               text: 'Find jobs',
+              width: double.infinity,
+              height: 50,
               onPressed: () {
                 Navigator.of(context).pushNamed(FillProfile.id);
               },

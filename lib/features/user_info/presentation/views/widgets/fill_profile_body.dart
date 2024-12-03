@@ -76,6 +76,8 @@ class FillProfileBody extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 20),
                   child: CustomButton(
                     text: 'Save changes',
+                    width: double.infinity,
+                    height: 50,
                     onPressed: () {
                       Navigator.of(context).pushNamed(HomePage.id);
                     },

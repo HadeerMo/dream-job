@@ -1,4 +1,5 @@
 import 'package:dream_jop/core/models/jobs/jobs.dart';
+import 'package:dream_jop/core/widgets/custom_bottom_bar.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/job_details_body.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class JobDetails extends StatelessWidget {
         body: JobDetailsBody(
           job: job,
         ),
+        bottomNavigationBar: const CustomBottomNavbar(),
       ),
     );
   }
