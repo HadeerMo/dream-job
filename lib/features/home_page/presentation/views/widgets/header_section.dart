@@ -1,5 +1,6 @@
 import 'package:dream_jop/core/models/jobs/jobs.dart';
 import 'package:dream_jop/core/utils/functions/sub_string_text.dart';
+import 'package:dream_jop/features/home_page/presentation/views/company_details.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/card_image.dart';
 import 'package:flutter/material.dart';
 
@@ -23,18 +24,23 @@ class HeaderSection extends StatelessWidget {
           height: 8,
         ),
         Text(
-          subString(job.name!,20),
+          subString(job.name!, 20),
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
         ),
         const SizedBox(
           height: 1,
         ),
-        Text(
-          subString(job.company!.shortName!,20),
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 14,
-            color: Color.fromARGB(255, 192, 191, 191),
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed(CompanyDetails.id,arguments: job);
+          },
+          child: Text(
+            subString(job.company!.shortName!, 20),
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              color: Color.fromARGB(255, 192, 191, 191),
+            ),
           ),
         ),
       ],

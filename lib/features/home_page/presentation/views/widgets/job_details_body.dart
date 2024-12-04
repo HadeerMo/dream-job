@@ -26,11 +26,11 @@ class JobDetailsBody extends StatelessWidget {
       ),
       DetailsInfoSection(job: job),
       const SizedBox(
-        height: 23,
+        height: 16,
       ),
       const DeviderWithPadding(),
       const SizedBox(
-        height: 23,
+        height: 16,
       ),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 23),
@@ -52,5 +52,3 @@ class JobDetailsBody extends StatelessWidget {
     ]);
   }
 }
-
-

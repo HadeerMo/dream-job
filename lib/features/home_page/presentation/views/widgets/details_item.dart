@@ -30,6 +30,7 @@ class DetailsItem extends StatelessWidget {
             title,
             style: const TextStyle(
               fontSize: 12,
+              fontWeight: FontWeight.bold
             ),
           ),
         ],
