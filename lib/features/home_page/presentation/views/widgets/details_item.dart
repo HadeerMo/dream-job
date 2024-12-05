@@ -20,7 +20,7 @@ class DetailsItem extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: ntbColor,
+            color: btnColor,
             size: iconSize,
           ),
           const SizedBox(

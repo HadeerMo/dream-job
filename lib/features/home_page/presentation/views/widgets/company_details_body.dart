@@ -16,7 +16,7 @@ class CompanyDetailsBody extends StatelessWidget {
     return ListView(
       children: [
         const CustomAppbar(
-          back: Icons.arrow_back_ios,
+          back:true,
         ),
         const SizedBox(
           height: 25,

@@ -2,7 +2,7 @@ import 'package:dream_jop/constant.dart';
 import 'package:dream_jop/core/widgets/custom_appbar.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/promoted_jobs.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/recently_addedlist.dart';
-import 'package:dream_jop/features/user_info/presentation/views/widgets/custom_text_form_field.dart';
+import 'package:dream_jop/core/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class HomePageBody extends StatelessWidget {

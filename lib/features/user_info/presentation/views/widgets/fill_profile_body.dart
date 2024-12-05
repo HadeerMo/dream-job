@@ -2,7 +2,7 @@ import 'package:dream_jop/constant.dart';
 import 'package:dream_jop/core/widgets/custom_appbar.dart';
 import 'package:dream_jop/core/widgets/custom_button.dart';
 import 'package:dream_jop/features/home_page/presentation/views/home_page.dart';
-import 'package:dream_jop/features/user_info/presentation/views/widgets/custom_text_form_field.dart';
+import 'package:dream_jop/core/widgets/custom_text_form_field.dart';
 import 'package:dream_jop/features/user_info/presentation/views/widgets/custom_upload_image_input.dart';
 import 'package:dream_jop/features/user_info/presentation/views/widgets/upload_cv.dart';
 import 'package:flutter/material.dart';

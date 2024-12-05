@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({
     super.key,
-    this.back,
-    this.markIt,
+    this.back = false,
+    this.markIt = false,
   });
-  final IconData? back;
-  final IconData? markIt;
+  final bool back;
+  final bool markIt;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,10 +22,10 @@ class CustomAppbar extends StatelessWidget {
           children: [
             IconButton(
                 onPressed: () {
-                  back!=null?Navigator.pop(context):'';
+                  back?Navigator.pop(context):'';
                 },
                 icon: Icon(
-                  back,
+                  back? Icons.arrow_back_ios: null,
                   color: Colors.white,
                   size: 15,
                 )),
@@ -35,7 +35,7 @@ class CustomAppbar extends StatelessWidget {
             IconButton(
                 onPressed: () {},
                 icon: Icon(
-                  markIt,
+                  markIt? Icons.bookmark_border:null,
                   color: Colors.white,
                 ))
           ],

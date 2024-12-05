@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
       onPressed: onPressed,
       style: ButtonStyle(
         backgroundColor: const WidgetStatePropertyAll(
-          ntbColor,
+          btnColor,
         ),
         minimumSize: WidgetStatePropertyAll(
           Size(width, height),

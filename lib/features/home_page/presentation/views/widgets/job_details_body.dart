@@ -14,8 +14,8 @@ class JobDetailsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(children: [
       const CustomAppbar(
-        back: Icons.arrow_back_ios,
-        markIt: Icons.bookmark_border,
+        back: true,
+        markIt: true,
       ),
       const SizedBox(
         height: 25,
@@ -42,9 +42,11 @@ class JobDetailsBody extends StatelessWidget {
       const SizedBox(
         height: 30,
       ),
-      const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 23),
-        child: EndingSection(),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 23),
+        child: EndingSection(
+          job: job,
+        ),
       ),
       const SizedBox(
         height: 23,

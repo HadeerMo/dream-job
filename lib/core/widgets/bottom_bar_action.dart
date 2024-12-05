@@ -21,7 +21,7 @@ class BottomBarAction extends StatelessWidget {
       icon: Icon(
         icon,
         color: pageName == navFor
-            ? ntbColor
+            ? btnColor
             : const Color.fromARGB(255, 219, 219, 219),
         size: 23,
       ),
