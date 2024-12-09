@@ -1,5 +1,6 @@
 import 'package:dream_jop/core/widgets/bottom_bar_action.dart';
 import 'package:dream_jop/features/home_page/presentation/views/home_page.dart';
+import 'package:dream_jop/features/search_job/presentation/views/job_search.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomNavbar extends StatelessWidget {
@@ -33,11 +34,13 @@ class CustomBottomNavbar extends StatelessWidget {
           ),
           BottomBarAction(
             pageName: pageName,
-            navFor: 'jop Search',
-            icon: pageName == 'jop Search'
+            navFor: JobSearch.id,
+            icon: pageName == JobSearch.id
                 ? Icons.explore
                 : Icons.explore_outlined,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, JobSearch.id);
+            },
           ),
           BottomBarAction(
             pageName: pageName,
@@ -50,4 +53,3 @@ class CustomBottomNavbar extends StatelessWidget {
     );
   }
 }
-

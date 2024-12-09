@@ -44,6 +44,7 @@ dependencies:
   path_provider: ^2.1.5
   provider: ^6.1.2
   shimmer: ^3.0.0
+  syncfusion_flutter_sliders: ^27.2.5
 
 dev_dependencies:
   flutter_lints: ^4.0.0

@@ -39,6 +39,7 @@ class _UploadCVState extends State<UploadCV> {
         pickDocument();
       },
       child: Container(
+        width: double.infinity,
         padding: const EdgeInsets.symmetric(vertical: 25),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),

@@ -12,7 +12,7 @@ class JobQuestion extends StatefulWidget {
 }
 
 class _JobQuestionState extends State<JobQuestion> {
-  String? selectedValue;
+  String? selectedValue = 'Yes';
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -1,7 +1,7 @@
 import 'package:dream_jop/core/widgets/error_msg.dart';
 import 'package:dream_jop/features/home_page/presentation/manager/cubits/home_cubit/home_cubit.dart';
 import 'package:dream_jop/features/home_page/presentation/views/widgets/job_card.dart';
-import 'package:dream_jop/features/home_page/presentation/views/widgets/loading/loadingCard.dart';
+import 'package:dream_jop/features/home_page/presentation/views/widgets/loading/loading_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

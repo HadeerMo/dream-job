@@ -4,7 +4,7 @@ import 'package:dream_jop/core/widgets/custom_button.dart';
 import 'package:dream_jop/features/home_page/presentation/views/home_page.dart';
 import 'package:dream_jop/core/widgets/custom_text_form_field.dart';
 import 'package:dream_jop/features/user_info/presentation/views/widgets/custom_upload_image_input.dart';
-import 'package:dream_jop/features/user_info/presentation/views/widgets/upload_cv.dart';
+import 'package:dream_jop/core/widgets/upload_cv.dart';
 import 'package:flutter/material.dart';
 
 class FillProfileBody extends StatelessWidget {
@@ -12,6 +12,7 @@ class FillProfileBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    GlobalKey<FormState> formKey = GlobalKey();
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Column(
@@ -37,53 +38,59 @@ class FillProfileBody extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 35),
-            child: ListView(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              children: [
-                const CustomTextFormField(
-                  hintText: 'Name',
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const CustomTextFormField(
-                  hintText: 'Age',
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const CustomTextFormField(
-                  hintText: 'Location',
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const CustomTextFormField(
-                  hintText: 'Email',
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const CustomTextFormField(
-                  hintText: 'Phone number',
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const UploadCV(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: CustomButton(
-                    text: 'Save changes',
-                    width: double.infinity,
-                    height: 50,
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(HomePage.id);
-                    },
+            child: Form(
+              key: formKey,
+              child: ListView(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                children: [
+                  const CustomTextFormField(
+                    hintText: 'Name',
                   ),
-                )
-              ],
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const CustomTextFormField(
+                    hintText: 'Age',
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const CustomTextFormField(
+                    hintText: 'Location',
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const CustomTextFormField(
+                    hintText: 'Email',
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const CustomTextFormField(
+                    hintText: 'Phone number',
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const UploadCV(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: CustomButton(
+                      text: 'Save changes',
+                      width: double.infinity,
+                      height: 50,
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          //Save user Info (on firebase)
+                          Navigator.of(context).pushNamed(HomePage.id);
+                        }
+                      },
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],

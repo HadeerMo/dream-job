@@ -5,6 +5,8 @@ import 'package:dream_jop/features/home_page/presentation/views/apply_to_job_pag
 import 'package:dream_jop/features/home_page/presentation/views/company_details.dart';
 import 'package:dream_jop/features/home_page/presentation/views/home_page.dart';
 import 'package:dream_jop/features/home_page/presentation/views/job_details.dart';
+import 'package:dream_jop/features/search_job/presentation/views/job_search.dart';
+import 'package:dream_jop/features/search_job/presentation/views/search_result.dart';
 import 'package:dream_jop/features/user_info/presentation/views/fill_profile.dart';
 import 'package:dream_jop/features/user_info/presentation/views/select_categories_page.dart';
 import 'package:dream_jop/features/welcome/presentation/views/welcome.dart';
@@ -46,6 +48,8 @@ class DreamJop extends StatelessWidget {
           JobDetails.id: (context) => const JobDetails(),
           CompanyDetails.id: (context) => const CompanyDetails(),
           ApplyToJobPage.id: (context) => const ApplyToJobPage(),
+          JobSearch.id: (context) => const JobSearch(),
+          SearchResult.id: (context) => const SearchResult(),
         },
       ),
     );

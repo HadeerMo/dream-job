@@ -12,6 +12,7 @@ class ApplyToJobBody extends StatelessWidget {
   final Jobs job;
   @override
   Widget build(BuildContext context) {
+    GlobalKey<FormState> formKey = GlobalKey();
     return ListView(
       children: [
         const CustomAppbar(
@@ -24,72 +25,79 @@ class ApplyToJobBody extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        Column(
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 35),
-              child: Column(
-                children: [
-                  Text(
-                    'Job application',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+        Form(
+          key: formKey,
+          child: Column(
+            children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 35),
+                child: Column(
+                  children: [
+                    Text(
+                      'Job application',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  CustomTextFormField(hintText: 'Your email address*'),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  CustomTextFormField(hintText: 'Your phone number*'),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 35),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                   Text(
-                    'Your updated CV*',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                   SizedBox(
-                    height: 15,
-                  ),
-                  PdfContainer(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  QuestionsList(),
-                  SizedBox(
-                    height: 17,
-                  ),
-                  CustomButton(
-                    text: 'Apply Now',
-                    width: double.infinity,
-                    height: 50,
-                  ),
                     SizedBox(
-                    height: 20,
-                  ),
-                ],
+                      height: 20,
+                    ),
+                    CustomTextFormField(hintText: 'Your email address*'),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    CustomTextFormField(hintText: 'Your phone number*'),
+                  ],
+                ),
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 35),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // shrinkWrap: true,
+                  children: [
+                    const Text(
+                      'Your updated CV*',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const PdfContainer(),
+                    
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const QuestionsList(),
+                    const SizedBox(
+                      height: 17,
+                    ),
+                    CustomButton(
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          // Navigator.of(context).pushNamed(AccountPage.id);
+                        }
+                      },
+                      text: 'Apply Now',
+                      width: double.infinity,
+                      height: 50,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         )
-    
       ],
     );
   }
 }
-
-
