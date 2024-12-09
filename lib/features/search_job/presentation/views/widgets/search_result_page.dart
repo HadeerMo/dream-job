@@ -17,7 +17,7 @@ class SearchResultBody extends StatelessWidget {
             children: [
               const CustomAppbar(back: true,),
               const SizedBox(
-                height: 20,
+                height: 25,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 23),
@@ -32,7 +32,7 @@ class SearchResultBody extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 25,
+                      height: 20,
                     ),
                     const Text(
                       'Promoted jobs',
