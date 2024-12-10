@@ -1,5 +1,6 @@
 import 'package:dream_jop/core/widgets/bottom_bar_action.dart';
 import 'package:dream_jop/features/home_page/presentation/views/home_page.dart';
+import 'package:dream_jop/features/personal_profile/presentation/views/personal_profile_page.dart';
 import 'package:dream_jop/features/search_job/presentation/views/job_search.dart';
 import 'package:flutter/material.dart';
 
@@ -44,9 +45,11 @@ class CustomBottomNavbar extends StatelessWidget {
           ),
           BottomBarAction(
             pageName: pageName,
-            navFor: 'account',
-            icon: pageName == 'account' ? Icons.person : Icons.person_outline,
-            onPressed: () {},
+            navFor: PersonalProfilePage.id,
+            icon: pageName == PersonalProfilePage.id ? Icons.person : Icons.person_outline,
+            onPressed: () {
+                Navigator.pushNamed(context, PersonalProfilePage.id);
+            },
           ),
         ],
       ),
